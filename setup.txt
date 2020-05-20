@@ -1,0 +1,41 @@
+------------------------------------------------------------------------------------
+These are the scopes: playlist-modify-private user-library-read playlist-read-private
+These are permissions my program asks for, modify private is used to edit the explore playlist, it is made as a private playlist so others can not see it
+library read is used to see what songs are in your liked songs, to compare
+Private read is used to see the private playlists, to see if the explore playlist exists, otherwise it will keep making a new playlist
+------------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------------
+Python version - 3.7.4 (A slight deviation may be okay, however it must be a python version 3.x.x)
+You may have to install spotipy, to do this opem cmd and type pip install spotipy
+If pip doesn't work you may have to install pip, it can be installed with the default python install on the windows store
+------------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------------
+Please be aware that this program may take some time to run, the more songs the longer the wait time, if the program becomes unresponsive that is because
+of the background process, wait and it should respond again (for benchmark - I have around 4k songs in my liked songs and it takes around 10 seconds to get them all)
+
+If you get an API rate limit exceeded, play wait a few seconds and try again
+
+In case of error in opening up the program, check the config file has this layout:
+In the config file, the first line must be username = (your spotify username)
+The next lines, before the = can be any name you want, this helps you identify what the url will be
+after the = is the spotify uri, to get this rightclick on the playlist, share, then copy spotify uri
+There must not be any blank lines inbetween all of these
+Example config.ini:
+username = mySpotifyName
+Discover Weekly = spotify:playlist:abcdefghijklmnopqrs123
+Other playlist = spotify:playlist:abcdefghijklmnopqrs124
+------------------------------------------------------------------------------------
+Version Alpha.03
+ChangeLog:
+Alpha.03 -
+	Added GUI
+	Edited some background names
+	Fixed error where the whole playlist was not recieved (again)
+	Fixed error where it would grab playlist twice
+
+Alpha.02 -
+	Fixed too many requests error
+	Fixed error where whole explore playlist was not recieved
+	Made more verbose so you know how far the program is in completion
